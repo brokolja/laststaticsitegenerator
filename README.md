@@ -1,6 +1,6 @@
 # LastStaticSiteGenerator
 
-After grunt, gulp and webpack i finally found a solution that beats all of them. The LastStaticSiteGenerator combines the best tools for the job to simplify your frontend-developer-live. Zero configuration! Hot-reloading everything!
+After grunt, gulp and webpack i finally found a solution that beats all of them. The LastStaticSiteGenerator combines the best tools (eleventy & parcel) for the job to simplify your frontend-developer-live. Zero configuration! Hot-reloading everything!
 
 ## Why
 
