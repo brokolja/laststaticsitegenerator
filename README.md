@@ -15,7 +15,7 @@ Transforms a directory of templates (of varying types: HTML, Markdown, Liquid, N
 1. Clone this repository:
 
 ````
-git clone 
+git clone https://github.com/koljakutschera/laststaticsitegenerator.git
 ````
 
 2. Open a terminal and run:
