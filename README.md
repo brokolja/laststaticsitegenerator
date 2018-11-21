@@ -12,7 +12,7 @@ Out of the box support for HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustach
 
 ## How
 
-Transforms a directory of templates into HTML using eleventy. Than parcel automaticaly detects all your assets in your pages and processes them.
+Transforms a directory of templates into HTML using eleventy. Than parcel automaticaly detects all your assets in your pages and processes them. No magic. You can adjust everything in package.json's scripts section.
 
 ## Installation
 
