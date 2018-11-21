@@ -1,14 +1,18 @@
 # LastStaticSiteGenerator
 
-This tool combines two simple tools(eleventy & parcel) to replace a few hundred grunt, gulp and webpack plugins and static-site-generators. Zero configuration!
+This tool combines two simple tools(eleventy & parcel) to replace a few hundred grunt, gulp and webpack plugins and static-site-generators. You can use and combine all of your favorite technologies to build a static website with zero configuration!
+
+## Supported technologies
+
+Out of the box support for HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and JavaScript Template Literals, Javascript, ReasonML, CSS, SCSS, LESS, Stylus, HTML, TypeScript, CoffeeScript, Vue, JSON, GraphQL, Rust, WebAssembly, YAML, TOML, OpenGL, Pug, WebManifest
 
 ## Why
 
-Zero configuration, Zero config code splitting, Hot module replacement, multicore compilation, filesystem cache, out of the box support for JS, CSS, HTML, file assets, and more - no plugins needed, Code is automatically transformed using Babel, PostCSS, and PostHTML when needed - even node_modules.
+ Zero configuration, Code splitting, Hot module replacement, multicore compilation, filesystem cache, out of the box support for JS, CSS, HTML, file assets, and more - no plugins needed, Code is automatically transformed using Babel, PostCSS, and PostHTML when needed - even node_modules.
 
 ## How
 
-Transforms a directory of templates (of varying types: HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and JavaScript Template Literals) into HTML using eleventy. Than parcel automaticaly detects all your assets(of varying types: Javascript, ReasonML, CSS, SCSS, LESS, Stylus, HTML, TypeScript, CoffeeScript, Vue, JSON, GraphQL, Rust, WebAssembly, YAML, TOML, OpenGL, Pug, WebManifest) in your pages and processes them. All without touching a single config-file.
+Transforms a directory of templates into HTML using eleventy. Than parcel automaticaly detects all your assets in your pages and processes them.
 
 ## Installation
 
