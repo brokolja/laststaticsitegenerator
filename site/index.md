@@ -5,4 +5,4 @@ title: Homepage
 
 # Home
 
-Goto: <a href="about.html">About</a>
+Goto: <a href="blog.html">Blog</a>

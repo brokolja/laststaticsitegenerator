@@ -1,0 +1,18 @@
+---
+layout: layouts/main
+title: Blog
+---
+
+<h1>Blog</h1>
+<ul>
+{%- for blog in collections.blog | reverse -%}
+  <li>
+  <a href="{{ blog.url }}">{{ blog.data.title }}</a> <time datetime="{{ blog.date | htmlDateString }}">{{ blog.date | readableDate }}</time>
+  {% for tag in blog.data.tags %}
+    {% if tag != "blog" %}
+      <b>{{ tag }}</b>
+    {% endif %}   
+  {% endfor %}
+  </li>
+{%- endfor -%}
+</ul>
