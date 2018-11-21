@@ -60,6 +60,12 @@ Eleventy: https://github.com/11ty/eleventy
 
 Parcel: https://parceljs.org/
 
+## Inspiration
+
+There are many sites using Eleventy for example the official website of the V8 project is hosting its source at: https://github.com/v8/v8.dev/tree/master/src
+
+For more check: https://www.11ty.io/docs/#sites-using-eleventy
+
 ## FAQ
 
 ### What are the .cache, dev_bundle, dev_site directories for?
