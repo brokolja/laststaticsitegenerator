@@ -26,7 +26,7 @@ npm install
 
 ## Getting started
 
-If you are ready for coding check the "site"-directory which contains some example files(a simple blog site). Feel free to delete its contents except for index.md to start from scratch. Now its time to read the eleventy and parcel documentation.
+If you are ready for coding check the "site"-directory which contains some example files(a simple blog site). Now its time to read the very short/good eleventy and parcel documentations.
 
 ## Development
 
