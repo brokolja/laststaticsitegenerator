@@ -8,7 +8,7 @@ Out of the box support for HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustach
 
 ## Why
 
- Zero configuration, Code splitting, Hot module replacement, multicore compilation, filesystem cache, out of the box support for JS, CSS, HTML, file assets, and more - no plugins needed, Code is automatically transformed using Babel, PostCSS, and PostHTML when needed - even node_modules.
+After learning gulp, grund, webpack and many more. You deserve a tool that gives you: zero configuration, Code splitting, Hot module replacement, multicore compilation, filesystem cache, out of the box support for JS, CSS, HTML, file assets, and more - no plugins needed, Code is automatically transformed using Babel, PostCSS, and PostHTML when needed - even node_modules.
 
 ## How
 
