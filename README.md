@@ -14,20 +14,45 @@ Transforms a directory of templates (of varying types: HTML, Markdown, Liquid, N
 
 1. Clone this repository:
 
-````
+```
 git clone https://github.com/koljakutschera/laststaticsitegenerator.git
-````
+```
 
 2. Open a terminal and run:
 
-````
+```
 npm install
-````
+```
 
 ## Getting started
 
-First you should read the eleventy and parcel documentation. Both are realy short and i promise 
-its worth it :P If you are ready for coding check the "site"-directory which contains some example files. Feel free to delete its example contents to start from scratch.
+If you are ready for coding check the "site"-directory which contains some example files(a simple blog site). Feel free to delete its contents except for index.md to start from scratch. Now its time to read the eleventy and parcel documentation.
+
+## Development
+
+To generate, bundle and serve the site on: http://localhost:1234/index.html open a terminal and run:
+
+```
+npm run dev
+```
+
+or with https enabled:
+
+```
+npm run dev:https
+```
+
+## Production
+
+To generate,bundle and minify the site open a terminal and run:
+
+```
+npm run production
+```
+
+## Hosting
+
+Generate the production bundle and push the "production_bundle"-directory to your server.
 
 ## Documentation
 
@@ -35,56 +60,27 @@ Eleventy: https://github.com/11ty/eleventy
 
 Parcel: https://parceljs.org/
 
-## Development
-
-To generate, bundle and serve the site on: http://localhost:1234/index.html open a terminal and run:
-
-````
-npm run dev
-````
-
-or with https enabled:
-
-````
-npm run dev:https
-````
-
-## Production
-
-To generate,bundle and minify the site open a terminal and run:
-
-````
-npm run production
-````
-
-## Hosting
-
-Generate the production bundle and push the "production_bundle"-directory to your server.
-
 ## FAQ
 
 ### What are the .cache, dev_bundle, dev_site directories for?
 
 Temporary files. Just ignore them.
 
-## Trouble
-
-### My new subpage is not generated
-
-This is because parcel does not(now) work with subdirectories created by eleventy. To fix it just add a permalink to all subpages yamlfront for example:
-
-````
----
-title: About
-permalink: /{{ title | slug }}.html
----
-````
-
-will generate: about.html
+## Troubleshooting
 
 ### I see nothing on: http://localhost:1234/
 
-This is a parcel-bug. To fix it just append your pages filename for example: index.html = http://localhost:1234/index.html
+Append your pages filename to the URL for example: index.html = http://localhost:1234/index.html
+
+### Page not generated
+
+This is because parcel does not(now) work with sub-directories(aka folders-URLs) created by eleventy. To fix this we rewrite permalinks in eleventy from: /filename/index.html to /filename.html via eleventy's global-data-file feature(see site/\_data/permalink.js). You can overwrite the default permalinks via yamlfront in a template but you have to make sure that its not rendered to a sub-directory. The following will not work for example:
+
+```
+---
+permalink: subdirectory/filename.html
+---
+```
 
 ## Contribution
 
