@@ -1,6 +1,6 @@
 {
   "name": "laststaticsitegenerator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The LastStaticSiteGenerator combines the best tools for the job to simplify your frontend-developer-live. Zero configuration! Hot-reloading everything!",
   "private": true,
   "scripts": {
