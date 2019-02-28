@@ -30,14 +30,14 @@ npm install
 
 ## Getting started
 
-If you are ready for coding check the "site"-directory which contains some example files(a simple blog site). Now its time to read the very short/good eleventy and parcel documentations.
+If you are ready for coding check the "site"-directory which contains some example files. Now its time to read the very short/good eleventy and parcel documentations.
 
 ## Getting started with PWA
 
-If you want to generate a PWA for your site you can adjust the following files to your needs:
+If you want to generate a PWA in production you can adjust the following files to your needs:
 
+- site/\_data/metadata.json
 - site/manifest.njk
-- site/\_includes/pwa.njk
 - site/_assets/manifest-192.png
 - site/_assets/manifest-512.png
 
@@ -57,7 +57,7 @@ or with https enabled:
 npm run dev:https
 ```
 
-## Bundle for production
+## Production
 
 To generate a minified production bundle open a terminal and run:
 
