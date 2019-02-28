@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    {% include "pwa.njk" %}
+  </head>
+  <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    {{ content | safe }}
+    <script src="../site/_assets/main.js"></script>
+  </body>
+</html>

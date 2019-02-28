@@ -1,0 +1,15 @@
+<!-- This should match the color in manifest.webmanifest -->
+<meta name="theme-color" content="#ffffff">
+<!-- Do not change start -->
+<link rel="manifest" href="/manifest.webmanifest">
+<script>
+if ('serviceWorker' in navigator && location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+  window.addEventListener('load', function() {
+    var urlSw = '/serviceworker.js'; // needs to be in a var so that parcel does not parse it
+    navigator.serviceWorker.register(urlSw).catch(function(e) {
+      console.error('Error during service worker registration:', e);
+    });
+  });
+} 
+</script>
+<!-- Do not change end -->

@@ -1,0 +1,9 @@
+README.md
+package.json
+package-lock.json
+site/_11ty/
+node_modules/
+dist/
+.cache
+cache_parcel
+cache_eleventy

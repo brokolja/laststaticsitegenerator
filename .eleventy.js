@@ -1,18 +1,19 @@
-const { DateTime } = require('luxon');
+const { DateTime } = require("luxon");
 
-module.exports = function (eleventyConfig) {
-  // Do not delete we need this in: site/_data/permalink.js
-  eleventyConfig.addFilter("replaceEmptyWithIndex", function(value) {
-    return !value || value === "" ? "index" : value;
+module.exports = function(eleventyConfig) {
+  eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.addFilter("urlFix", function(value) {
+    value = !value || value === "" || value === "/" ? "index" : value;
+    return value.indexOf(".html") < 0 ? value + ".html" : value;
   });
-  // The following filters are just examples for the simple-blog-example
-  eleventyConfig.addFilter('readableDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toFormat('dd LLLL yyyy');
+  eleventyConfig.addFilter("htmlDateString", dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat("yyyy-LL-dd");
   });
-  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toFormat('yyyy-LL-dd');
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat("dd LLLL yyyy");
   });
-  // You can return your Config object (optional).
-  return eleventyConfig;
+  eleventyConfig.addFilter("head", (array, n) => {
+    if (n < 0) return array.slice(n);
+    return array.slice(0, n);
+  });
 };

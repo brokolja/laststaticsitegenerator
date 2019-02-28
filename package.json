@@ -1,25 +1,36 @@
 {
   "name": "laststaticsitegenerator",
-  "version": "1.0.3",
-  "description": "The LastStaticSiteGenerator combines the best tools for the job to simplify your frontend-developer-live. Zero configuration! Hot-reloading everything!",
+  "version": "1.0.4",
+  "description": "The LastStaticSiteGenerator combines the best tools for the job to simplify your frontend-developer live. Zero configuration! Hot-reloading everything!",
   "private": true,
   "scripts": {
-    "clean": "rm -rf ./dev_site ./dev_bundle ./production_bundle ./.cache ./dist",
-    "dev": "npm run clean && npm run production:eleventy && run-p --race dev:eleventy dev:parcel",
-    "dev:https": "npm run clean && npm run production:eleventy && run-p --race dev:eleventy dev:parcel:https",
-    "dev:eleventy": "eleventy --input=./site/*.* --output=./dev_site --watch",
-    "dev:parcel": "parcel ./dev_site/* --out-dir ./dev_bundle --open",
-    "dev:parcel:https": "parcel ./dev_site/* --out-dir ./dev_bundle --open --https",
+    "clean": "rm -rf ./dist ./.cache ./cache_parcel ./cache_eleventy ",
+    "dev": "npm run clean && npm run production:eleventy && npm run message:dev && run-p --race dev:eleventy dev:parcel",
+    "dev:https": "npm run clean && npm run production:eleventy && npm run message:dev && run-p --race dev:eleventy dev:parcel:https",
+    "dev:eleventy": "eleventy --input=./site --output=./cache_eleventy --watch",
+    "dev:parcel": "parcel ./cache_eleventy/* --out-dir ./cache_parcel",
+    "dev:parcel:https": "parcel ./cache_eleventy/* --out-dir ./cache_parcel --https",
+    "message:dev": "echo 'Your site will be available at: http://127.0.0.1:1234/index.html'",
     "production": "npm run clean && npm run production:eleventy && npm run production:parcel",
-    "production:eleventy": "eleventy --input=./site/*.* --output=./dev_site",
-    "production:parcel": "parcel build ./dev_site/* --out-dir ./production_bundle --no-source-maps"
+    "production:eleventy": "eleventy --input=./site --output=./cache_eleventy",
+    "production:parcel": "parcel build ./cache_eleventy/* --out-dir ./dist --no-source-maps",
+    "production:pwa": "npm run clean && npm run production:eleventy && npm run production:parcel && workbox injectManifest workbox-config.js && workbox copyLibraries dist/ && mv $(find ./dist -name \\*workbox\\* -type d -maxdepth 1 -print | head -n1) ./dist/workbox",
+    "serve": "npm run production && serve ./dist/",
+    "serve:pwa": "npm run production:pwa && serve ./dist/"
   },
   "author": "Kolja Kutschera",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.6.0",
-    "luxon": "^1.7.1",
-    "npm-run-all": "^4.1.3",
-    "parcel-bundler": "^1.10.3"
+    "@11ty/eleventy": "^0.7.1",
+    "luxon": "^1.11.1",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.11.0",
+    "sass": "^1.17.0",
+    "serve": "^10.1.2",
+    "workbox-cli": "^3.6.3"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
+    "normalize.css": "^8.0.1"
   }
 }

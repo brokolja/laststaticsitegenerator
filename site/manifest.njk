@@ -1,0 +1,23 @@
+---
+permalink: manifest.webmanifest
+---
+{
+  "name": "{{ metadata.title }}",
+  "short_name": "{{ metadata.title_short }}",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "../site/_assets/manifest-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "../site/_assets/manifest-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
