@@ -30,7 +30,6 @@
     "workbox-cli": "^3.6.3"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
     "normalize.css": "^8.0.1"
   }
 }
