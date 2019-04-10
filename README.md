@@ -28,21 +28,6 @@ git clone https://github.com/koljakutschera/laststaticsitegenerator.git
 npm install
 ```
 
-## Getting started
-
-If you are ready for coding check the "site"-directory which contains some example files. Now its time to read the very short/good eleventy and parcel documentations.
-
-## Getting started with PWA
-
-If you want to generate a PWA in production you can adjust the following files to your needs:
-
-- site/\_data/metadata.json
-- site/manifest.njk
-- site/_assets/manifest-192.png
-- site/_assets/manifest-512.png
-
-Advanced users can use: workbox-config.js to configure how the PWA builds. For more infos see: https://developers.google.com/web/tools/workbox/
-
 ## Development
 
 To generate, bundle and serve the site on: http://localhost:1234/index.html open a terminal and run:
@@ -59,35 +44,42 @@ npm run dev:https
 
 ## Production
 
-To generate a minified production bundle open a terminal and run:
+To generate a minified production-bundle open a terminal and run:
 
 ```
 npm run production
 ```
 
-To generate the minified production bundle as PWA open a terminal and run:
+To generate the minified production-bundle as PWA open a terminal and run:
 
 ```
 npm run production:pwa
 ```
 
-## Local testing
-
-To just serve the site on localhost open a terminal and run:
+To just serve the production-bundle from "dist"-directory on localhost open a terminal and run:
 
 ```
 npm run serve
 ```
 
-To just serve the PWA on localhost open a terminal and run:
+## Getting started
 
-```
-npm run serve:pwa
-```
+If you are ready for coding check the "site"-directory which contains some example files. Now its time to read the very short/good eleventy and parcel documentations.
+
+## Getting started with PWA
+
+If you want to generate a PWA in production you can adjust the following files to your needs:
+
+- site/\_data/metadata.json
+- site/manifest.njk
+- site/_assets/manifest-192.png
+- site/_assets/manifest-512.png
+
+Advanced users can use: workbox-config.js to configure how the PWA builds. For more infos see: https://developers.google.com/web/tools/workbox/
 
 ## Hosting
 
-Generate the production bundle and push the "production_bundle"-directory to your server.
+Generate the production-bundle and push the "dist"-directory to your server.
 
 ## Documentation
 
@@ -109,17 +101,18 @@ Temporary files. Just ignore them.
 
 ## Troubleshooting
 
-### PWA Manifest not served
-
-Make sure your server uses: application/manifest+json MIME-Type for .webmanifest file.
 
 ### I see nothing on: http://localhost:1234/
 
 Append your pages filename to the URL for example: index.html = http://localhost:1234/index.html
 
-### Random script in head
+### PWA Manifest not served
 
-This happens if you add inline-styles in development and is a parcel-bug. Just ignore the script it will not be present in production bundle.
+Make sure your server uses: application/manifest+json MIME-Type for .webmanifest file.
+
+### Serviceworker not loaded
+
+The serviceworker will not load on local domains (localhost/127.0.0.1).
 
 ### Page not generated
 
@@ -130,6 +123,11 @@ This is because parcel does not(now) work with sub-directories(aka folders-URLs)
 permalink: subdirectory/filename.html
 ---
 ```
+
+### Random script in head
+
+This happens if you add inline-styles in development and is a parcel-bug. Just ignore the script it will not be present in production-bundle.
+
 
 ## Contribution
 
