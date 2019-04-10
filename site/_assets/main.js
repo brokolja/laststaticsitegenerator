@@ -1,1 +1,1 @@
-import './main.scss';
+console.log("It works!")

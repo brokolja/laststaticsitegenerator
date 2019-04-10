@@ -2,5 +2,7 @@
   
   "title": "My Project",
   "title_short": "My Project",
-  "description": "My Projects description"
+  "description": "My Projects description",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
 }
