@@ -1,18 +1,20 @@
 # LastStaticSiteGenerator
 
-This tool combines two simple tools(eleventy & parcel) to replace a few hundred grunt, gulp and webpack plugins and static-site-generators. You can use and combine all of your favorite technologies to build a static website with zero configuration!
+After learning how to use task runners like grunt, gulp, webpack and many static site generators i was in need for one workflow that makes setting up any tools unnecessary. So my first mission was to find tools that require minimal or no configuration for all parts of my frontend-workflow. The first tool must be a static-site-generator for creating multi-page websites. The second tool is an asset-bundler that just handles any file i put into my websites like .css, .js, .ts, .vue and all my node_modules from npm. The last third tool should pick up all generated files and transform them into a fancy progressive-web-app (pwa) with offline-support and everything just done!
 
-## Supported technologies
+After testing many fancy tools i found the following three to be the best for my use-case:
 
-Out of the box support for HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and JavaScript Template Literals, Javascript, ReasonML, CSS, SCSS, LESS, Stylus, HTML, TypeScript, CoffeeScript, Vue, JSON, GraphQL, Rust, WebAssembly, YAML, TOML, OpenGL, Pug, WebManifest
+* Static-site-generator: Eleventy
+* Asset-bundler: Parcel
+* PWA-generator: Workbox
 
-## Why
+I tried to turn my new toolset in a row via simple npm-scripts. First generate static websites with Eleventy. Than Parcel automatically extracts, transforms and even downloads all needed assets from the static websites to create some bundles. At last Workbox comes in to the game and does its magic to generate a minfied PWA with all batteries included from these bundles.
 
-After learning gulp, grund, webpack and many more. You deserve a tool that gives you: zero configuration, Code splitting, Hot module replacement, multicore compilation, filesystem cache, out of the box support for JS, CSS, HTML, file assets, and more - no plugins needed, Code is automatically transformed using Babel, PostCSS, and PostHTML when needed - even node_modules.
+I finally got things working and i did not need any other setup in the last few projects. No matter if its react, vue or some good old jquery. So if this can make me happy i think it must be shared...
 
-## How
+# Setup
 
-Transforms a directory of templates into HTML using eleventy. Than parcel automaticaly detects all your assets in your pages and processes them. No magic. You can adjust everything in package.json's scripts section.
+Get https://nodejs.org and use a Unix/Linux system because i have not tested this on win.
 
 ## Installation
 
@@ -64,7 +66,7 @@ npm run serve
 
 ## Getting started
 
-If you are ready for coding check the "site"-directory which contains some example files. Now its time to read the very short/good eleventy and parcel documentations.
+If you are ready for coding check the "site"-directory which contains some example files. Now its time to read the very short/good eleventy and parcel documentations. You can adjust everything workflow related in package.json's scripts section.
 
 ## Getting started with PWA
 
@@ -77,21 +79,28 @@ If you want to generate a PWA in production you can adjust the following files t
 
 Advanced users can use: workbox-config.js to configure how the PWA builds. For more infos see: https://developers.google.com/web/tools/workbox/
 
-## Hosting
+## Supported technologies
 
-Generate the production-bundle and push the "dist"-directory to your server.
+HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and JavaScript Template Literals, Javascript, ReasonML, CSS, SCSS, LESS, Stylus, HTML, TypeScript, CoffeeScript, Vue, JSON, GraphQL, Rust, WebAssembly, YAML, TOML, OpenGL, Pug, WebManifest, ...
 
-## Documentation
+## Some fancy features
+
+* no plugins
+* code splitting
+* filesystem cache
+* minimal configuration
+* multicore compilation
+* hot module replacement
+* out of the box support for everything*
+* use legancy scripts and node_modules side by side
+
+## More docucmentation
 
 Eleventy: https://github.com/11ty/eleventy
 
 Parcel: https://parceljs.org/
 
-## Inspiration
-
-There are many sites using Eleventy for example the official website of the V8 project is hosting its source at: https://github.com/v8/v8.dev/tree/master/src
-
-For more check: https://www.11ty.io/docs/#sites-using-eleventy
+Workbox: https://developers.google.com/web/tools/workbox/
 
 ## FAQ
 
@@ -116,18 +125,13 @@ The serviceworker will not load on local domains (localhost/127.0.0.1).
 
 ### Page not generated
 
-This is because parcel does not(now) work with sub-directories(aka folders-URLs) created by eleventy. To fix this we rewrite permalinks in eleventy from: /filename/index.html to /filename.html via eleventy's global-data-file feature(see site/\_data/permalink.js). You can overwrite the default permalinks via yamlfront in a template but you have to make sure that its not rendered to a sub-directory. The following will not work for example:
+This is because parcel does not(now) work with sub-directories(or folders-URLs) created by eleventy. To fix this we rewrite permalinks in eleventy from: /filename/index.html to /filename.html via eleventy's global-data-file feature(see site/\_data/permalink.js). You can overwrite the default permalinks via yamlfront in a template but you have to make sure that its not rendered to a sub-directory. The following will not work for example:
 
 ```
 ---
 permalink: subdirectory/filename.html
 ---
 ```
-
-### Random script in head
-
-This happens if you add inline-styles in development and is a parcel-bug. Just ignore the script it will not be present in production-bundle.
-
 
 ## Contribution
 
