@@ -114,6 +114,9 @@ Temporary files. Just ignore them.
 
 ## Troubleshooting
 
+### Build error in development
+
+When the development task is started first parcel needs to wait for eleventy to build  pages. This usually takes < 1 second but if you have thousends of pages it can take a little more time. In this case you can adjust the time parcel has to wait for eleventy in package.json. Look for "sleep 3" and adjust it to the time eleventy shows you in the console. For example eleventy shows: Processed 7000 files in 5.28 seconds so you should put something like sleep 6 in package.json.
 
 ### I see nothing on: http://localhost:1234/
 
