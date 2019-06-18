@@ -4,3 +4,4 @@ dist/
 .cache/
 cache_parcel/
 cache_eleventy/
+package-lock.json
