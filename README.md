@@ -94,7 +94,7 @@ HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and Java
 * out of the box support for everything*
 * use legancy scripts and node_modules side by side
 
-## More docucmentation
+## More documentation
 
 Eleventy: https://github.com/11ty/eleventy
 
