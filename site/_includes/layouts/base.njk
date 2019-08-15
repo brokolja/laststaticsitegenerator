@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{'locale' | i18n}}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ renderData.title or title or metadata.title }}</title>
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    <title>{{ title | i18n }}</title>
+    <meta name="Description" content="{{ description | i18n }}">
     {% include "pwa.njk" %}
   </head>
   <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>

@@ -1,10 +1,11 @@
 ---
 layout: layouts/base.njk
-title: Not found
-description: Not found.
-permalink: 404.html
+title: notFound
+description: notFound
 ---
 
-<h1>Not found</h1>
+<h1>{{"notFound" | i18n}}</h1>
 
-Go <a href="{{ '/' | url | urlFix }}">home</a>.
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+<p>{{"backTo" | i18n}}: <a href="{{ '/' | url | urlFix }}">{{"homepage" | i18n}}</a></p>

@@ -5,3 +5,4 @@ dist/
 cache_parcel/
 cache_eleventy/
 package-lock.json
+dist-i18n/

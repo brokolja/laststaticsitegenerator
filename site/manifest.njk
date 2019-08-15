@@ -2,8 +2,8 @@
 permalink: manifest.webmanifest
 ---
 {
-  "name": "{{ metadata.title }}",
-  "short_name": "{{ metadata.title_short }}",
+  "name": "{{ metadata.title | i18n }}",
+  "short_name": "{{ metadata.title_short | i18n }}",
   "theme_color": "{{ metadata.theme_color }}",
   "background_color": "{{ metadata.background_color }}",
   "display": "standalone",
