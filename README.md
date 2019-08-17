@@ -177,11 +177,3 @@ But this will work:
 permalink: filename.html
 ---
 ```
-
-## Contribution
-
-Pleeeease dont Pull-Request me. All the logic of the LastStaticSiteGenerator lives in package.json's scripts section. Just adjust it to your needs.
-
-## Todo
-
-- I18n filenames

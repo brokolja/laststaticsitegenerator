@@ -1,10 +1,9 @@
 {
-	"locale": "de",
-	"myProject": "Mein Projekt",
-	"helloWorld": "Hallo Welt",
-	"notFound": "Nicht gefunden",
-	"homepage": "Startseite",
-	"backTo": "Zurück zu",
-	"undefined": "undefined",
-	"": ""
+  "locale": "de",
+  "myProject": "Mein Projekt",
+  "helloWorld": "Hallo Welt",
+  "notFound": "Nicht gefunden",
+  "homepage": "Startseite",
+  "backTo": "Zurück zu",
+  "aboutMe": "Über mich"
 }

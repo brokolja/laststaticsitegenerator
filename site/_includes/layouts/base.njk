@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title | i18n }}</title>
-    <meta name="Description" content="{{ description | i18n }}">
+    <title>{{ title }}</title>
+    <meta name="Description" content="{{ description }}">
     {% include "pwa.njk" %}
   </head>
   <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>

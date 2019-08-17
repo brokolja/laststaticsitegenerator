@@ -1,8 +1,10 @@
 {
-  "locale": "en",
-  "myProject": "My Project",
-  "helloWorld": "Hello World",
-  "notFound": "Not found",
-  "homepage": "Home",
-  "backTo": "Back to"
+	"locale": "en",
+	"myProject": "My Project",
+	"helloWorld": "Hello World",
+	"notFound": "Not found",
+	"homepage": "Home",
+	"backTo": "Back to",
+	"aboutMe": "About me",
+	"{{'notFound' | i18n}}": "{{'notFound' | i18n}}"
 }
