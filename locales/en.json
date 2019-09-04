@@ -6,5 +6,7 @@
 	"homepage": "Home",
 	"backTo": "Back to",
 	"aboutMe": "About me",
+	"{{ 'aboutMe' | i18n }}": "{{ 'aboutMe' | i18n }}",
+	"{{ 'helloWorld' | i18n }}": "{{ 'helloWorld' | i18n }}",
 	"{{'notFound' | i18n}}": "{{'notFound' | i18n}}"
 }
