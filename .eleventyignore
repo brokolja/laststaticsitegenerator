@@ -5,5 +5,5 @@ site/_11ty/
 node_modules/
 dist/
 .cache
-cache_parcel
-cache_eleventy
+.cache_parcel
+.cache_eleventy

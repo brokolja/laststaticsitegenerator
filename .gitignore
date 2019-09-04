@@ -2,7 +2,7 @@
 node_modules/
 dist/
 .cache/
-cache_parcel/
-cache_eleventy/
+.cache_parcel/
+.cache_eleventy/
 package-lock.json
 dist-i18n/

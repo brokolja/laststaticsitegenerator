@@ -138,7 +138,7 @@ Workbox: https://developers.google.com/web/tools/workbox/
 
 By default Eleventy creates subdirectories/folder-urls when generating pages but because Parcel cant work with them i used a little hack or better a feature (permalinks) of Eleventy itself to rewrite all pages to the root directory. Maybe this will be fixed by Parcel in feature.
 
-### What are the .cache, cache_eleventy, cache_parcel directories for?
+### What are the .cache, .cache_eleventy, .cache_parcel directories for?
 
 Temporary files. Just ignore them.
 
